@@ -26,6 +26,23 @@
   footer {
     font-size:0.7em;
   }
+
+  .pics {
+    width:100%;
+  }
+
+  .pics > div {
+    display:inline;
+    margin-right:15px;
+  }
+
+  .bold {
+    font-weight:bold;
+  }
+
+  section {
+    padding-bottom:15px;
+  }
 </style>
 </head>
 <body>
@@ -59,31 +76,27 @@
             <img src="/public/images/noun_project_1071.svg" alt="" height="30" />
             /
           </span>
-          <ul>
-            {% for post in site.categories.en %}
-              <li>
-              <a href="{{ post.url }}">
-                {{ post.title }}
-              </a>
-              </li>
-            {% endfor %}
-          </ul>
         </li>
+        {% for post in site.categories.en %}
+          <li>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+          </li>
+        {% endfor %}
         <li>
           <span>
             <img src="/public/images/noun_project_16451.svg" alt="" height="30" />
             /
           </span>
-          <ul>
-            {% for post in site.categories.pt %}
-              <li>
-              <a href="{{ post.url }}">
-                {{ post.title }}
-              </a>
-              </li>
-            {% endfor %}
-          </ul>
         </li>
+        {% for post in site.categories.pt %}
+          <li>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+          </li>
+        {% endfor %}
       </ul>
     </nav>
   <footer>
